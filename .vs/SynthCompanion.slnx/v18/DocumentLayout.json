@@ -1,0 +1,256 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\mdt\\documents\\isibd s8\\ingenierie et maquette numerique\\projet\\synthcompanion\\assets\\scripts\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\mdt\\documents\\isibd s8\\ingenierie et maquette numerique\\projet\\synthcompanion\\assets\\scripts\\ai\\llmconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ai\\llmconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\mdt\\documents\\isibd s8\\ingenierie et maquette numerique\\projet\\synthcompanion\\assets\\scripts\\puzzles\\puzzlehud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\puzzles\\puzzlehud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\mdt\\documents\\isibd s8\\ingenierie et maquette numerique\\projet\\synthcompanion\\assets\\scripts\\puzzles\\sequencepuzzle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\puzzles\\sequencepuzzle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\mdt\\documents\\isibd s8\\ingenierie et maquette numerique\\projet\\synthcompanion\\assets\\scripts\\puzzles\\puzzlebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\puzzles\\puzzlebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\mdt\\documents\\isibd s8\\ingenierie et maquette numerique\\projet\\synthcompanion\\assets\\scripts\\puzzles\\placementpuzzle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\puzzles\\placementpuzzle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\mdt\\documents\\isibd s8\\ingenierie et maquette numerique\\projet\\synthcompanion\\assets\\scripts\\network\\networkmanagersetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\network\\networkmanagersetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\mdt\\documents\\isibd s8\\ingenierie et maquette numerique\\projet\\synthcompanion\\assets\\scripts\\puzzles\\keypadpuzzle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\puzzles\\keypadpuzzle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\Puzzles\\PuzzleManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\Puzzles\\PuzzleManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\mdt\\documents\\isibd s8\\ingenierie et maquette numerique\\projet\\synthcompanion\\assets\\scripts\\vr\\ttsplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\vr\\ttsplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\mdt\\documents\\isibd s8\\ingenierie et maquette numerique\\projet\\synthcompanion\\assets\\scripts\\data\\sessionlogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\data\\sessionlogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\mdt\\documents\\isibd s8\\ingenierie et maquette numerique\\projet\\synthcompanion\\assets\\scripts\\ai\\aiplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ai\\aiplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\mdt\\documents\\isibd s8\\ingenierie et maquette numerique\\projet\\synthcompanion\\assets\\scripts\\network\\desktopplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\network\\desktopplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\mdt\\documents\\isibd s8\\ingenierie et maquette numerique\\projet\\synthcompanion\\assets\\scripts\\network\\chatmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\network\\chatmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameController.cs",
+              "DocumentMoniker": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\GameController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameController.cs",
+              "ToolTip": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\GameController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAwwB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T17:43:00.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PuzzleHUD.cs",
+              "DocumentMoniker": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\Puzzles\\PuzzleHUD.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Puzzles\\PuzzleHUD.cs",
+              "ToolTip": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\Puzzles\\PuzzleHUD.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Puzzles\\PuzzleHUD.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T15:45:28.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SequencePuzzle.cs",
+              "DocumentMoniker": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\Puzzles\\SequencePuzzle.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Puzzles\\SequencePuzzle.cs",
+              "ToolTip": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\Puzzles\\SequencePuzzle.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Puzzles\\SequencePuzzle.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAwwBsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T15:24:20.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PuzzleButton.cs",
+              "DocumentMoniker": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\Puzzles\\PuzzleButton.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Puzzles\\PuzzleButton.cs",
+              "ToolTip": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\Puzzles\\PuzzleButton.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Puzzles\\PuzzleButton.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T15:23:18.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PlacementPuzzle.cs",
+              "DocumentMoniker": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\Puzzles\\PlacementPuzzle.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Puzzles\\PlacementPuzzle.cs",
+              "ToolTip": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\Puzzles\\PlacementPuzzle.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Puzzles\\PlacementPuzzle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T12:45:49.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LLMConnector.cs",
+              "DocumentMoniker": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\AI\\LLMConnector.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\AI\\LLMConnector.cs",
+              "ToolTip": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\AI\\LLMConnector.cs",
+              "RelativeToolTip": "Assets\\Scripts\\AI\\LLMConnector.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA/wCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T11:27:05.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "KeypadPuzzle.cs",
+              "DocumentMoniker": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\Puzzles\\KeypadPuzzle.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Puzzles\\KeypadPuzzle.cs",
+              "ToolTip": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\Puzzles\\KeypadPuzzle.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Puzzles\\KeypadPuzzle.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T12:04:13.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TTSPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\VR\\TTSPlayer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\VR\\TTSPlayer.cs",
+              "ToolTip": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\VR\\TTSPlayer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\VR\\TTSPlayer.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA/wCYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T11:29:05.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NetworkManagerSetup.cs",
+              "DocumentMoniker": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\Network\\NetworkManagerSetup.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Network\\NetworkManagerSetup.cs",
+              "ToolTip": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\Network\\NetworkManagerSetup.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Network\\NetworkManagerSetup.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAwwBkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T17:44:31.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SessionLogger.cs",
+              "DocumentMoniker": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\Data\\SessionLogger.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Data\\SessionLogger.cs",
+              "ToolTip": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\Data\\SessionLogger.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Data\\SessionLogger.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwDIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T11:28:16.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AIPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\AI\\AIPlayer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\AI\\AIPlayer.cs",
+              "ToolTip": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\AI\\AIPlayer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\AI\\AIPlayer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T22:24:52.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PuzzleManager.cs",
+              "DocumentMoniker": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\Puzzles\\PuzzleManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Puzzles\\PuzzleManager.cs",
+              "ToolTip": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\Puzzles\\PuzzleManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Puzzles\\PuzzleManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T11:25:40.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DesktopPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\Network\\DesktopPlayer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Network\\DesktopPlayer.cs",
+              "ToolTip": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\Network\\DesktopPlayer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Network\\DesktopPlayer.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAowBsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T17:50:45.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ChatManager.cs",
+              "DocumentMoniker": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\Network\\ChatManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Network\\ChatManager.cs",
+              "ToolTip": "C:\\Users\\MDT\\Documents\\ISIBD S8\\ingenierie et maquette numerique\\projet\\SynthCompanion\\Assets\\Scripts\\Network\\ChatManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Network\\ChatManager.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T20:47:39.209Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
