@@ -10,7 +10,7 @@ public class SequencePuzzle : NetworkBehaviour
     private List<int> playerOrder = new List<int>();
     public TextMeshProUGUI progressText;
 
-    string[] colorNames = { "Rouge", "Vert", "Bleu", "Jaune" };
+    string[] colorNames = { "Rouge", "Bleu", "Vert", "Jaune" };
 
     void Awake() => Instance = this;
 

@@ -52,6 +52,7 @@
     <Compile Include="Assets\Scripts\VR\TTSPlayer.cs" />
     <Compile Include="Assets\Scripts\Puzzles\SequencePuzzle.cs" />
     <Compile Include="Assets\Scripts\AI\AIPlayer.cs" />
+    <Compile Include="Assets\Scripts\VR\SavWav.cs" />
     <Compile Include="Assets\Scripts\Puzzles\KeypadPuzzle.cs" />
     <Compile Include="Assets\Scripts\Puzzles\PuzzleHUD.cs" />
     <Compile Include="Assets\Scripts\AI\LLMConnector.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="Assets\Scripts\Puzzles\BallDragger.cs" />
     <Compile Include="Assets\Scripts\Network\DesktopPlayer.cs" />
     <Compile Include="Assets\Scripts\Network\ChatManager.cs" />
+    <Compile Include="Assets\Scripts\VR\VoiceCapture.cs" />
     <Compile Include="Assets\Scripts\Puzzles\PlacementPuzzle.cs" />
     <Compile Include="Assets\Scripts\Puzzles\PuzzleManager.cs" />
     <Compile Include="Assets\Scripts\Puzzles\PuzzleButton.cs" />
