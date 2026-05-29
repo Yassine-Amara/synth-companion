@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4761557623260323699}
   - component: {fileID: 6736445163811263064}
   - component: {fileID: 914463332728062700}
-  - component: {fileID: 7200602137997242313}
   - component: {fileID: -6404606782871129193}
   - component: {fileID: 9148654085078611046}
   m_Layer: 0
@@ -145,19 +144,6 @@ MonoBehaviour:
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
 --- !u!114 &914463332728062700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5224713000089990775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cf7a94ef39310c438752ae19c1c954c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AIPlayer
-  ShowTopMostFoldoutHeaderGroup: 1
---- !u!114 &7200602137997242313
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

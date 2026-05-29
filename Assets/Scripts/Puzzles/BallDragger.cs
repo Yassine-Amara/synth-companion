@@ -67,7 +67,7 @@ public class BallDragger : NetworkBehaviour
         }
     }
 
-    [ServerRpc(RequireOwnership = false)]
+    [Rpc(SendTo.Server)]
     private void UpdatePositionServerRpc(Vector3 newPos)
     {
         transform.position = Vector3.Lerp(transform.position, newPos, 0.3f);

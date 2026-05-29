@@ -14,7 +14,7 @@ public class SequencePuzzle : NetworkBehaviour
 
     void Awake() => Instance = this;
 
-    [ServerRpc(RequireOwnership = false)]
+    [Rpc(SendTo.Server)]
     public void PressButtonServerRpc(int buttonId)
     {
         playerOrder.Add(buttonId);
@@ -39,7 +39,7 @@ public class SequencePuzzle : NetworkBehaviour
         }
     }
 
-    [ClientRpc]
+    [Rpc(SendTo.Everyone)]
     void UpdateProgressClientRpc(int count, int buttonId)
     {
         if (progressText == null) return;
@@ -47,7 +47,7 @@ public class SequencePuzzle : NetworkBehaviour
         progressText.color = Color.yellow;
     }
 
-    [ClientRpc]
+    [Rpc(SendTo.Everyone)]
     void ShowErrorClientRpc()
     {
         if (progressText == null) return;
@@ -55,7 +55,7 @@ public class SequencePuzzle : NetworkBehaviour
         progressText.color = Color.red;
     }
 
-    [ClientRpc]
+    [Rpc(SendTo.Everyone)]
     void ShowSuccessClientRpc()
     {
         if (progressText == null) return;
