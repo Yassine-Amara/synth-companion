@@ -16,7 +16,7 @@ public class KeypadPuzzle : NetworkBehaviour
         if (solved) return;
         if (player == null)
         {
-            var p = FindObjectOfType<DesktopPlayer>();
+            var p = FindFirstObjectByType<DesktopPlayer>();
             if (p != null) player = p.transform;
             return;
         }
@@ -36,7 +36,7 @@ public class KeypadPuzzle : NetworkBehaviour
         TryCodeServerRpc(codeInput.text);
     }
 
-    [ServerRpc(RequireOwnership = false)]
+    [Rpc(SendTo.Server)]
     void TryCodeServerRpc(string entered)
     {
         if (entered == secretCode)
@@ -46,7 +46,7 @@ public class KeypadPuzzle : NetworkBehaviour
         }
     }
 
-    [ClientRpc]
+    [Rpc(SendTo.Everyone)]
     void HidePanelClientRpc()
     {
         solved = true;

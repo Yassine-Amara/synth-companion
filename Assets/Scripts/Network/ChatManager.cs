@@ -21,13 +21,13 @@ public class ChatManager : NetworkBehaviour
         inputField.text = "";
     }
 
-    [ServerRpc(RequireOwnership = false)]
+    [Rpc(SendTo.Server)]
     void SendMessageServerRpc(string msg, ulong senderId)
     {
         BroadcastMessageClientRpc($"Joueur {senderId}: {msg}");
     }
 
-    [ClientRpc]
+    [Rpc(SendTo.Everyone)]
     void BroadcastMessageClientRpc(string msg)
     {
         messages.Add(msg);

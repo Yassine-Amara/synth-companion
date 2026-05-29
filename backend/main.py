@@ -38,7 +38,7 @@ def get_dialogue(req: DialogueRequest):
 @app.post("/tts")
 async def text_to_speech(req: dict):
     communicate = edge_tts.Communicate(req["text"], voice="fr-FR-HenriNeural")
-    await communicate.save("output.mp3")
+    await communicate.save(req.get("output_path", "output.mp3"))
     return {"status": "ok"}
 
 @app.post("/stt")

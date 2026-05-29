@@ -5,7 +5,6 @@ public class PlacementPuzzle : NetworkBehaviour
 {
     public Transform target;
     public Transform ball;
-    private bool dragging = false;
     private Camera cam;
 
     void Start()

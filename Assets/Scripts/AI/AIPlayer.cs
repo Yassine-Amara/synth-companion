@@ -9,10 +9,13 @@ public class AIPlayer : NetworkBehaviour
     private float minX = -3f, maxX = 3f;
     private float minZ = -3f, maxZ = 3f;
     private float fixedY = 1f;
+    
+    private Animator animator;
 
     public override void OnNetworkSpawn()
     {
         if (!IsServer) return;
+        animator = GetComponent<Animator>();
         StartCoroutine(AILoop());
         StartCoroutine(MoveLoop());
     }
@@ -51,6 +54,11 @@ public class AIPlayer : NetworkBehaviour
             transform.rotation = Quaternion.Slerp(
                 transform.rotation, rotation, 5f * Time.deltaTime);
         }
+        
+        if (animator != null)
+        {
+            animator.SetBool("IsWalking", direction.magnitude > 0.1f);
+        }
     }
 
     // Chat IA
@@ -73,10 +81,14 @@ public class AIPlayer : NetworkBehaviour
 
     IEnumerator TypingEffect(string msg)
     {
+        if (animator != null) animator.SetBool("IsTalking", true);
+        
         yield return new WaitForSeconds(Random.Range(0.8f, 2.5f));
         SessionLogger.Instance?.Log("AI", "spoke", msg);
         ChatManager.Instance?.DisplayAIMessage(msg);
         if (TTSPlayer.Instance != null)
             yield return TTSPlayer.Instance.Speak(msg);
+            
+        if (animator != null) animator.SetBool("IsTalking", false);
     }
 }

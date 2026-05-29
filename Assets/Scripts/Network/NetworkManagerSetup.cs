@@ -26,7 +26,7 @@ public class NetworkManagerSetup : MonoBehaviour
             var ball = Instantiate(ballPrefab, new Vector3(-2f, 1f, -8f), Quaternion.identity);
             ball.GetComponent<NetworkObject>().Spawn();
 
-            var pp = FindObjectOfType<PlacementPuzzle>();
+            var pp = FindFirstObjectByType<PlacementPuzzle>();
             if (pp != null) pp.ball = ball.transform;
         }
     }

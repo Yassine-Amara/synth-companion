@@ -10099,7 +10099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e352af352447a4ca96097d1cb6d3b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TTSPlayer
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1968443029}
 --- !u!4 &1968443031
 Transform:
   m_ObjectHideFlags: 0

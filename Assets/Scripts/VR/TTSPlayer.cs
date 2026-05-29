@@ -4,7 +4,7 @@ using UnityEngine.Networking;
 using System.Text;
 
 [System.Serializable]
-public class TTSRequest { public string text; }
+public class TTSRequest { public string text; public string output_path; }
 
 public class TTSPlayer : MonoBehaviour
 {
@@ -16,7 +16,8 @@ public class TTSPlayer : MonoBehaviour
 
     public IEnumerator Speak(string text)
     {
-        var req = new TTSRequest { text = text };
+        string savePath = Application.persistentDataPath + "/output.mp3";
+        var req = new TTSRequest { text = text, output_path = savePath };
         string json = JsonUtility.ToJson(req);
         using var request = new UnityWebRequest(ttsUrl, "POST");
         request.uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(json));
@@ -25,8 +26,7 @@ public class TTSPlayer : MonoBehaviour
         yield return request.SendWebRequest();
         if (request.result == UnityWebRequest.Result.Success)
         {
-            string mp3Path = "file://" + System.IO.Path.Combine(
-                System.IO.Directory.GetCurrentDirectory(), "output.mp3");
+            string mp3Path = "file://" + savePath;
             using var audioReq = UnityWebRequestMultimedia.GetAudioClip(mp3Path, AudioType.MPEG);
             yield return audioReq.SendWebRequest();
             if (audioReq.result == UnityWebRequest.Result.Success)
