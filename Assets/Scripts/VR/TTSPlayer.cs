@@ -11,6 +11,7 @@ public class TTSPlayer : MonoBehaviour
     public static TTSPlayer Instance;
     public AudioSource audioSource;
     private string ttsUrl = "http://localhost:8000/tts";
+    private string audioFileUrl = "http://localhost:8000/static/output.mp3";
 
     void Awake() => Instance = this;
 
@@ -23,16 +24,26 @@ public class TTSPlayer : MonoBehaviour
         request.downloadHandler = new DownloadHandlerBuffer();
         request.SetRequestHeader("Content-Type", "application/json");
         yield return request.SendWebRequest();
+
         if (request.result == UnityWebRequest.Result.Success)
         {
-            string mp3Path = "file://" + System.IO.Path.Combine(
-                System.IO.Directory.GetCurrentDirectory(), "output.mp3");
-            using var audioReq = UnityWebRequestMultimedia.GetAudioClip(mp3Path, AudioType.MPEG);
+            // Forcer le rechargement du fichier en évitant la mise en cache d'Unity
+            string finalAudioUrl = audioFileUrl + "?t=" + System.DateTime.Now.Ticks;
+
+            using var audioReq = UnityWebRequestMultimedia.GetAudioClip(finalAudioUrl, AudioType.MPEG);
             yield return audioReq.SendWebRequest();
+
             if (audioReq.result == UnityWebRequest.Result.Success)
             {
-                audioSource.clip = DownloadHandlerAudioClip.GetContent(audioReq);
-                audioSource.Play();
+                if (audioSource != null)
+                {
+                    audioSource.clip = DownloadHandlerAudioClip.GetContent(audioReq);
+                    audioSource.Play();
+                }
+            }
+            else
+            {
+                Debug.LogWarning("Audio non charge : " + audioReq.error);
             }
         }
     }

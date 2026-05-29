@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from groq import Groq
 import edge_tts
@@ -8,6 +9,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 app = FastAPI()
+
+# Configuration pour rendre accessible le dossier du backend via HTTP
+app.mount("/static", StaticFiles(directory=os.path.dirname(__file__)), name="static")
+
 groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 whisper_model = whisper.load_model("base")
 
@@ -37,9 +42,10 @@ def get_dialogue(req: DialogueRequest):
 
 @app.post("/tts")
 async def text_to_speech(req: dict):
+    output_path = os.path.join(os.path.dirname(__file__), "output.mp3")
     communicate = edge_tts.Communicate(req["text"], voice="fr-FR-HenriNeural")
-    await communicate.save("output.mp3")
-    return {"status": "ok"}
+    await communicate.save(output_path)
+    return {"status": "ok", "path": output_path}
 
 @app.post("/stt")
 def speech_to_text(req: dict):

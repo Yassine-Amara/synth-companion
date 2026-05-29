@@ -12,7 +12,6 @@ public class VoiceCapture : MonoBehaviour
 
     void Update()
     {
-        // Maintiens T pour parler, relache pour envoyer
         if (Keyboard.current.tKey.wasPressedThisFrame && !isRecording)
             StartRecording();
         if (Keyboard.current.tKey.wasReleasedThisFrame && isRecording)
@@ -31,24 +30,31 @@ public class VoiceCapture : MonoBehaviour
         isRecording = false;
         Microphone.End(null);
         string path = Application.persistentDataPath + "/voice_input.wav";
+
+        // Utilisation de la classe utilitaire externe SavWav
         SavWav.Save(path, clip);
         StartCoroutine(SendToWhisper(path));
     }
 
     IEnumerator SendToWhisper(string path)
     {
-        string json = "{\"audio_path\": \"" + path + "\"}";
+        string json = "{\"audio_path\": \"" + path.Replace("\\", "\\\\") + "\"}";
         using var request = new UnityWebRequest(sttUrl, "POST");
         request.uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(json));
         request.downloadHandler = new DownloadHandlerBuffer();
         request.SetRequestHeader("Content-Type", "application/json");
         yield return request.SendWebRequest();
+
         if (request.result == UnityWebRequest.Result.Success)
         {
-            string result = request.downloadHandler.text;
-            string text = result.Replace("{\"text\": \"", "").Replace("\"}", "");
-            ChatManager.Instance?.SendVoiceMessage(text);
-            Debug.Log($"Transcrit : {text}");
+            string responseText = request.downloadHandler.text;
+            STTResponse response = JsonUtility.FromJson<STTResponse>(responseText);
+            string transcribed = response.text.Trim();
+            Debug.Log($"Transcrit : {transcribed}");
+            ChatManager.Instance?.SendVoiceMessage(transcribed);
         }
     }
+
+    [System.Serializable]
+    class STTResponse { public string text; }
 }

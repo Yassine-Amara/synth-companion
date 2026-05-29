@@ -32,17 +32,26 @@ public class ChatManager : NetworkBehaviour
     {
         messages.Add(msg);
         chatDisplay.text = string.Join("\n", messages);
-        if (scrollRect != null)
-            UnityEngine.UI.LayoutRebuilder.ForceRebuildLayoutImmediate(
-                scrollRect.content.GetComponent<RectTransform>());
+
         StartCoroutine(ScrollToBottom());
+
+        // Synchronisation réseau du TTS : Si le message vient d'Alex, tout le monde joue le son
+        if (msg.StartsWith("Alex:") && TTSPlayer.Instance != null)
+        {
+            string cleanText = msg.Replace("Alex:", "").Trim();
+            StartCoroutine(TTSPlayer.Instance.Speak(cleanText));
+        }
     }
 
     System.Collections.IEnumerator ScrollToBottom()
     {
         yield return new WaitForEndOfFrame();
-        if (scrollRect != null)
+        if (scrollRect != null && scrollRect.content != null)
+        {
+            // Force la mise à jour géométrique du UI Content
+            UnityEngine.UI.LayoutRebuilder.ForceRebuildLayoutImmediate(scrollRect.content);
             scrollRect.verticalNormalizedPosition = 0f;
+        }
     }
 
     public void DisplayAIMessage(string msg)

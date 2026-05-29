@@ -6,8 +6,8 @@ public class AIPlayer : NetworkBehaviour
 {
     private Vector3 targetPosition;
     private float moveSpeed = 2f;
-    private float minX = -3f, maxX = 3f;
-    private float minZ = -3f, maxZ = 3f;
+    private float minX = 1f, maxX = 4f;
+    private float minZ = -8f, maxZ = -3f;
     private float fixedY = 1f;
 
     public override void OnNetworkSpawn()
@@ -17,19 +17,16 @@ public class AIPlayer : NetworkBehaviour
         StartCoroutine(MoveLoop());
     }
 
-    // Mouvement aleatoire
     IEnumerator MoveLoop()
     {
         targetPosition = transform.position;
         while (true)
         {
-            // Choisit une nouvelle position aleatoire dans la salle
             targetPosition = new Vector3(
                 Random.Range(minX, maxX),
                 fixedY,
                 Random.Range(minZ, maxZ)
             );
-            // Attend entre 3 et 8 secondes avant de bouger encore
             yield return new WaitForSeconds(Random.Range(3f, 8f));
         }
     }
@@ -37,13 +34,13 @@ public class AIPlayer : NetworkBehaviour
     void Update()
     {
         if (!IsServer) return;
-        // Deplace l'IA vers la cible doucement
+
         transform.position = Vector3.MoveTowards(
             transform.position,
             targetPosition,
             moveSpeed * Time.deltaTime
         );
-        // Tourne vers la direction du mouvement
+
         Vector3 direction = targetPosition - transform.position;
         if (direction.magnitude > 0.1f)
         {
@@ -53,7 +50,6 @@ public class AIPlayer : NetworkBehaviour
         }
     }
 
-    // Chat IA
     IEnumerator AILoop()
     {
         yield return new WaitForSeconds(15f);
@@ -75,8 +71,8 @@ public class AIPlayer : NetworkBehaviour
     {
         yield return new WaitForSeconds(Random.Range(0.8f, 2.5f));
         SessionLogger.Instance?.Log("AI", "spoke", msg);
+
+        // Envoie au chat, ce qui déclenchera l'audio sur tous les clients connectés
         ChatManager.Instance?.DisplayAIMessage(msg);
-        if (TTSPlayer.Instance != null)
-            yield return TTSPlayer.Instance.Speak(msg);
     }
 }
