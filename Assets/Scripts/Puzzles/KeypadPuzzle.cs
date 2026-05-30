@@ -10,6 +10,7 @@ public class KeypadPuzzle : NetworkBehaviour
     public float interactDistance = 2f;
     private Transform player;
     private bool solved = false;
+    private string enteredCode = "";
 
     void Update()
     {
@@ -28,12 +29,39 @@ public class KeypadPuzzle : NetworkBehaviour
         else
         {
             if (codePanel != null) codePanel.SetActive(false);
+            enteredCode = "";
+            UpdateDisplay();
         }
+    }
+
+    // Appele par chaque bouton chiffre
+    public void PressDigit(string digit)
+    {
+        if (enteredCode.Length < 4)
+        {
+            enteredCode += digit;
+            UpdateDisplay();
+        }
+    }
+
+    public void DeleteDigit()
+    {
+        if (enteredCode.Length > 0)
+        {
+            enteredCode = enteredCode.Substring(0, enteredCode.Length - 1);
+            UpdateDisplay();
+        }
+    }
+
+    void UpdateDisplay()
+    {
+        if (codeInput != null)
+            codeInput.text = enteredCode;
     }
 
     public void TryCode()
     {
-        TryCodeServerRpc(codeInput.text);
+        TryCodeServerRpc(enteredCode);
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -44,6 +72,10 @@ public class KeypadPuzzle : NetworkBehaviour
             PuzzleManager.Instance.puzzle1State.Value = 1;
             HidePanelClientRpc();
         }
+        else
+        {
+            ResetCodeClientRpc();
+        }
     }
 
     [ClientRpc]
@@ -51,5 +83,12 @@ public class KeypadPuzzle : NetworkBehaviour
     {
         solved = true;
         if (codePanel != null) codePanel.SetActive(false);
+    }
+
+    [ClientRpc]
+    void ResetCodeClientRpc()
+    {
+        enteredCode = "";
+        UpdateDisplay();
     }
 }

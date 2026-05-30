@@ -1,8 +1,9 @@
 using System.Collections;
-using UnityEngine;
-using UnityEngine.Networking;
 using System.Text;
+using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
+using UnityEngine.Networking;
 
 public class VoiceCapture : MonoBehaviour
 {
@@ -12,10 +13,32 @@ public class VoiceCapture : MonoBehaviour
 
     void Update()
     {
-        if (Keyboard.current.tKey.wasPressedThisFrame && !isRecording)
-            StartRecording();
-        if (Keyboard.current.tKey.wasReleasedThisFrame && isRecording)
-            StopAndSend();
+        // Desktop — touche T
+        if (Keyboard.current != null)
+        {
+            if (Keyboard.current.tKey.wasPressedThisFrame && !isRecording)
+                StartRecording();
+            if (Keyboard.current.tKey.wasReleasedThisFrame && isRecording)
+                StopAndSend();
+        }
+
+        // VR — bouton X (main gauche Quest 2)
+        if (UnityEngine.XR.XRSettings.isDeviceActive)
+        {
+            var leftHand = InputSystem.GetDevice<UnityEngine.InputSystem.XR.XRController>(
+                CommonUsages.LeftHand.ToString());
+            if (leftHand != null)
+            {
+                var primaryButton = leftHand.GetChildControl<ButtonControl>("primaryButton");
+                if (primaryButton != null)
+                {
+                    if (primaryButton.wasPressedThisFrame && !isRecording)
+                        StartRecording();
+                    if (primaryButton.wasReleasedThisFrame && isRecording)
+                        StopAndSend();
+                }
+            }
+        }
     }
 
     void StartRecording()
@@ -30,8 +53,6 @@ public class VoiceCapture : MonoBehaviour
         isRecording = false;
         Microphone.End(null);
         string path = Application.persistentDataPath + "/voice_input.wav";
-
-        // Utilisation de la classe utilitaire externe SavWav
         SavWav.Save(path, clip);
         StartCoroutine(SendToWhisper(path));
     }

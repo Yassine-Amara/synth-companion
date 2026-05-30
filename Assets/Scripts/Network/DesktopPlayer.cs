@@ -14,23 +14,28 @@ public class DesktopPlayer : NetworkBehaviour
     public override void OnNetworkSpawn()
     {
         if (!IsOwner) return;
+        cc = GetComponent<CharacterController>();
+        velocity = Vector3.zero;
         transform.position = new Vector3(4f, 5f, 6f);
         cam = Camera.main;
-        cam.transform.SetParent(transform);
-        cam.transform.localPosition = new Vector3(0, 1.7f, 0);
-        cam.transform.localRotation = Quaternion.identity;
+        if (cam != null)
+        {
+            cam.transform.SetParent(transform);
+            cam.transform.localPosition = new Vector3(0, 1.7f, 0);
+            cam.transform.localRotation = Quaternion.identity;
+        }
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
     void Start()
     {
-        cc = GetComponent<CharacterController>();
     }
 
     void Update()
     {
         if (!IsOwner) return;
+        if (cc == null) return;
 
         // Rotation camera avec la souris
         if (Cursor.lockState == CursorLockMode.Locked)
@@ -60,6 +65,12 @@ public class DesktopPlayer : NetworkBehaviour
         direction.y = 0;
         cc.Move(direction * 5f * Time.deltaTime);
 
+        // Interaction avec E — regarde vers un cube de sequence et appuie E
+        if (Keyboard.current.eKey.wasPressedThisFrame)
+        {
+            TryInteract();
+        }
+
         // Echap pour liberer/capturer la souris
         if (Keyboard.current.escapeKey.wasPressedThisFrame)
         {
@@ -72,6 +83,22 @@ public class DesktopPlayer : NetworkBehaviour
             {
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
+            }
+        }
+    }
+
+    void TryInteract()
+    {
+        if (cam == null) return;
+        Ray ray = new Ray(cam.transform.position, cam.transform.forward);
+        if (Physics.Raycast(ray, out RaycastHit hit, 5f))
+        {
+            PuzzleButton pb = hit.collider.GetComponent<PuzzleButton>();
+            if (pb != null)
+            {
+                SequencePuzzle.Instance.PressButtonServerRpc(pb.buttonId);
+                pb.StartCoroutine(pb.FlashEffect());
+                return;
             }
         }
     }

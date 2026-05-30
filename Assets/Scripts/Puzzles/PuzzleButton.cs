@@ -15,13 +15,20 @@ public class PuzzleButton : MonoBehaviour, IPointerClickHandler
             originalColor = rend.material.color;
     }
 
+    // Clic souris (Desktop)
     public void OnPointerClick(PointerEventData eventData)
+    {
+        Activate();
+    }
+
+    // Appele aussi depuis XR Simple Interactable via Unity Events dans l'Inspector
+    public void Activate()
     {
         SequencePuzzle.Instance.PressButtonServerRpc(buttonId);
         StartCoroutine(FlashEffect());
     }
 
-    System.Collections.IEnumerator FlashEffect()
+    public System.Collections.IEnumerator FlashEffect()
     {
         if (rend != null)
         {
